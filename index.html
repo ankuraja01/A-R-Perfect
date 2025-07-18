@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AR Perfect Coaching - Admission Form</title>
+  <style>
+    body {
+      font-family: Arial;
+      text-align: center;
+      padding: 50px;
+      background: #f0f0f0;
+    }
+    form {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      display: inline-block;
+    }
+    input {
+      width: 90%;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    button {
+      padding: 10px 20px;
+      background: green;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .course-icon-btn {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 10px 16px;
+      border-radius: 5px;
+      font-size: 18px;
+      text-decoration: none;
+    }
+    .button-group {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      margin-top: 10px;
+    }
+    .social-buttons {
+      margin-top: 20px;
+    }
+    .insta-btn {
+      display: inline-block;
+      background: #E1306C;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-size: 16px;
+      margin-top: 10px;
+    }
+    .founder-section {
+      margin-top: 50px;
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      display: inline-block;
+      max-width: 600px;
+    }
+    .founder-section img {
+      width: 200px;
+      border-radius: 50%;
+      margin: 10px 0;
+    }
+    .founder-section p {
+      font-size: 16px;
+      line-height: 1.6;
+      text-align: justify;
+    }
+  </style>
+</head>
+<body>
+  <h2>AR Perfect Coaching Admission Form</h2>
+  <p>Fill in your details below if you are interested in joining our coaching.</p>
+
+  <form onsubmit="sendToWhatsApp(); return false;">
+    <input type="text" id="name" placeholder="Your Full Name" required><br>
+    <input type="tel" id="phone" placeholder="Your Mobile Number" required><br>
+    <input type="text" id="course" placeholder="Course Name" required><br>
+
+    <div class="button-group">
+      <a href="course.html" class="course-icon-btn" target="_blank">✅ Course</a>
+      <button type="submit">Submit & Contact via WhatsApp</button>
+    </div>
+  </form>
+
+  <div class="social-buttons">
+    <p>Follow us on Instagram:</p>
+    <a href="https://www.instagram.com/ankuraja01" class="insta-btn" target="_blank">📸 Instagram: @ankuraja01</a>
+  </div>
+
+  <div class="founder-section">
+    <h2>Founder - Ankit Vishwakarma</h2>
+    <img src="Ankit.jpg" alt="Ankit Vishwakarma">
+    <p>
+      Ankit Vishwakarma is the founder of <strong>AR Perfect Coaching</strong> and a passionate <strong>Data Scientist</strong> with deep knowledge in <strong>technology, analytics, and innovation</strong>. With a strong vision to transform education using modern tech, he combines real-world data skills with coaching excellence to help students achieve their goals.
+    </p>
+  </div>
+
+  <script>
+    function sendToWhatsApp() {
+      var name = document.getElementById("name").value;
+      var phone = document.getElementById("phone").value;
+      var course = document.getElementById("course").value;
+
+      var url = "https://wa.me/919118162095?text=" +
+        encodeURIComponent(
+          "New Coaching Admission Inquiry\n" +
+          "Name: " + name +
+          "\nPhone: " + phone +
+          "\nCourse: " + course
+        );
+
+      window.open(url, '_blank').focus();
+    }
+  </script>
+</body>
+</html>
