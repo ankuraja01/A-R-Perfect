@@ -2,12 +2,48 @@
 <html>
 <head>
   <title>AR Perfect Coaching - Admission Form</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
       font-family: Arial;
       text-align: center;
       padding: 50px;
       background: #f0f0f0;
+    }
+    .nav-bar {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+      margin-bottom: 30px;
+    }
+    .nav-btn {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 8px;
+      font-size: 16px;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    .founder-section {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      display: inline-block;
+      max-width: 600px;
+      margin-bottom: 40px;
+    }
+    .founder-section img {
+      width: 200px;
+      border-radius: 50%;
+      margin: 10px 0;
+    }
+    .founder-section p {
+      font-size: 16px;
+      line-height: 1.6;
+      text-align: justify;
     }
     form {
       background: white;
@@ -31,22 +67,6 @@
       font-size: 16px;
       cursor: pointer;
     }
-    .course-icon-btn {
-      background-color: #007bff;
-      color: white;
-      border: none;
-      padding: 10px 16px;
-      border-radius: 5px;
-      font-size: 18px;
-      text-decoration: none;
-    }
-    .button-group {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 10px;
-      margin-top: 10px;
-    }
     .social-buttons {
       margin-top: 20px;
     }
@@ -60,54 +80,45 @@
       font-size: 16px;
       margin-top: 10px;
     }
-    .founder-section {
-      margin-top: 50px;
-      background: #fff;
-      padding: 20px;
-      border-radius: 10px;
-      display: inline-block;
-      max-width: 600px;
-    }
-    .founder-section img {
-      width: 200px;
-      border-radius: 50%;
-      margin: 10px 0;
-    }
-    .founder-section p {
-      font-size: 16px;
-      line-height: 1.6;
-      text-align: justify;
-    }
   </style>
 </head>
 <body>
-  <h2>AR Perfect Coaching Admission Form</h2>
-  <p>Fill in your details below if you are interested in joining our coaching.</p>
 
-  <form onsubmit="sendToWhatsApp(); return false;">
-    <input type="text" id="name" placeholder="Your Full Name" required><br>
-    <input type="tel" id="phone" placeholder="Your Mobile Number" required><br>
-    <input type="text" id="course" placeholder="Course Name" required><br>
-
-    <div class="button-group">
-      <a href="course.html" class="course-icon-btn" target="_blank">✅ Course</a>
-      <button type="submit">Submit & Contact via WhatsApp</button>
-    </div>
-  </form>
-
-  <div class="social-buttons">
-    <p>Follow us on Instagram:</p>
-    <a href="https://www.instagram.com/ankuraja01" class="insta-btn" target="_blank">📸 Instagram: @ankuraja01</a>
+  <!-- ✅ Navigation Buttons Bar -->
+  <div class="nav-bar">
+    <a href="index.html" class="nav-btn">✅ Home</a>
+    <a href="courses.html" class="nav-btn" target="_blank">✅ Courses</a>
+    <a href="about.html" class="nav-btn" target="_blank">✅ About Us</a>
+    <a href="results.html" class="nav-btn" target="_blank">✅ Results</a>
+    <a href="contact.html" class="nav-btn" target="_blank">✅ Contact</a>
   </div>
 
+  <!-- ✅ Founder Section First -->
   <div class="founder-section">
     <h2>Founder - Ankit Vishwakarma</h2>
-    <img src="Ankit.jpg" alt="Ankit Vishwakarma">
+    <img src="ankit.jpg" alt="Ankit Vishwakarma">
     <p>
       Ankit Vishwakarma is the founder of <strong>AR Perfect Coaching</strong> and a passionate <strong>Data Scientist</strong> with deep knowledge in <strong>technology, analytics, and innovation</strong>. With a strong vision to transform education using modern tech, he combines real-world data skills with coaching excellence to help students achieve their goals.
     </p>
   </div>
 
+  <!-- ✅ Admission Form -->
+  <h2>AR Perfect Coaching Admission Form</h2>
+  <p>Fill in your details below if you are interested in joining our coaching.</p>
+  <form onsubmit="sendToWhatsApp(); return false;">
+    <input type="text" id="name" placeholder="Your Full Name" required><br>
+    <input type="tel" id="phone" placeholder="Your Mobile Number" required><br>
+    <input type="text" id="course" placeholder="Course Name" required><br>
+    <button type="submit">Submit & Contact via WhatsApp</button>
+  </form>
+
+  <!-- ✅ Social Section -->
+  <div class="social-buttons">
+    <p>Follow us on Instagram:</p>
+    <a href="https://www.instagram.com/ankuraja01" class="insta-btn" target="_blank">📸 Instagram: @ankuraja01</a>
+  </div>
+
+  <!-- ✅ WhatsApp Script -->
   <script>
     function sendToWhatsApp() {
       var name = document.getElementById("name").value;
@@ -125,5 +136,6 @@
       window.open(url, '_blank').focus();
     }
   </script>
+
 </body>
 </html>
