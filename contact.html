@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Us - AR Perfect Coaching</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f0f4f8;
+      color: #333;
+    }
+
+    .header {
+      background: linear-gradient(90deg, #28a745, #1e7e34);
+      color: white;
+      text-align: center;
+      padding: 50px 20px;
+    }
+
+    .header h1 {
+      margin: 0;
+      font-size: 36px;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    }
+
+    form {
+      display: grid;
+      gap: 20px;
+    }
+
+    label {
+      font-weight: bold;
+      margin-bottom: 5px;
+      display: block;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    button {
+      background: #28a745;
+      color: white;
+      padding: 14px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #218838;
+    }
+
+    .contact-info {
+      margin-top: 40px;
+    }
+
+    .contact-info h3 {
+      margin-bottom: 10px;
+      color: #1e7e34;
+    }
+
+    .contact-info p {
+      margin: 5px 0;
+    }
+
+    @media (max-width: 600px) {
+      .header h1 {
+        font-size: 28px;
+      }
+
+      .container {
+        margin: 20px;
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ✅ Header -->
+  <div class="header">
+    <h1>Contact Us</h1>
+    <p>We'd love to hear from you. Please reach out with any queries.</p>
+  </div>
+
+  <!-- ✅ Contact Form -->
+  <div class="container">
+    <form action="#" method="post">
+      <div>
+        <label for="name">Your Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+      </div>
+      
+      <div>
+        <label for="email">Your Email</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+      </div>
+      
+      <div>
+        <label for="phone">Mobile Number</label>
+        <input type="tel" id="phone" name="phone" placeholder="Enter your number" required>
+      </div>
+
+      <div>
+        <label for="message">Your Message</label>
+        <textarea id="message" name="message" placeholder="Write your message here..." required></textarea>
+      </div>
+
+      <button type="submit">Send Message</button>
+    </form>
+
+    <!-- ✅ Coaching Contact Info -->
+    <div class="contact-info">
+      <h3>📍 AR Perfect Coaching Address:</h3>
+      <p>Lucknow,Uttar Pradesh, India</p>
+
+      <h3>📞 Phone:</h3>
+      <p>+919118162095</p>
+
+      <h3>📧 Email:</h3>
+      <p>arperfect9118@gmail.com</p>
+
+      <h3>📷 Instagram:</h3>
+      <p><a href="https://instagram.com/ankuraja01" target="_blank">@ankuraja01</a></p>
+    </div>
+  </div>
+
+</body>
+</html>
